@@ -33,6 +33,9 @@ A responsive React-based clone of Google's Gemini AI interface, featuring modern
 - Node.js 16+ 
 - npm or yarn
 
+## Live Link
+   (https://gemini-clone-2025.netlify.app/)
+
 ### Installation
 
 1. **Clone the repository**
