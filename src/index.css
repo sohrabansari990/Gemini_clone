@@ -1,0 +1,240 @@
+@import "tailwindcss";
+/* @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap'); */
+
+*{
+  /* padding: 0%;
+  margin: 0%; */
+  box-sizing: border-box;
+  /* font-family: Outfit; */
+}
+
+#root{
+  display: flex;
+  min-height: 100vh;
+  background: #1b1c1d;
+  animation: fadeIn 1s ease-in-out;
+}
+
+body{
+  overflow: hidden;
+  
+}
+
+/* Add specific styles for code blocks */
+.result pre,
+.result code {
+  white-space: pre-wrap !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+}
+
+.result {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.Output::-webkit-scrollbar{
+  display: none;
+}
+
+.loader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 40px;
+  position: absolute;
+  z-index: 1000;
+}
+
+.loader hr {
+  border: none;
+  border-radius: 5px ;
+  background: linear-gradient(90deg, #9ed7ff, #ffffff, #9ed7ff) ;
+  background-size: 800px 50px ;
+  height: 20px;
+  animation: loader 3s infinite linear;
+}
+
+/* Add animation for loading effect */
+@keyframes loader {
+  0% {
+    background-position: -800px 0px;
+  }
+  100% {
+    background-position: 800px 0px;
+  }
+}
+
+ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+li {
+  margin: 5px 0;
+  list-style-type: disc;
+}
+
+.top{
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+  
+}
+
+@media (max-width: 600px) {
+
+  .sidebar{
+    display: none;
+
+  }
+  body{
+    overflow: scroll;
+  }
+  .main_heading{
+    font-size: 8vw;
+    line-height: 6vh;
+    width: 400px;
+  }
+  .Homepage{
+    width: 100%;
+    height: 100%;
+  }
+  .card{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+    
+    
+    
+    
+    
+  }
+  .card div{
+    
+    width: 40%;
+    height: 17vh;
+    border-radius: 10px;
+    padding: 10px;
+    
+  }
+  .sub_card{
+    
+    
+    font-size: 3vw;
+    
+  }
+
+  .sub_card i{
+    font-size: 5vw;
+  }
+  
+
+  .home{
+    width: 100% !important; /* Fixed: was 20%, causing container issues */
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .APP{
+    display:inline-flex;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  .Input{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+  .footer{
+    font-size: 1.5vw;
+    white-space: nowrap;
+  }
+
+  .Output{
+    width: 95% !important; /* More restrictive width */
+    max-width: 100vw !important;
+    
+    
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    padding-bottom: 50px;
+    
+  }
+  
+  .loader{
+    width: 80%;
+  }
+  
+  .result{
+    font-size: 3vw;
+    word-break: break-word !important; /* Changed from break-all to break-word */
+    overflow-wrap: break-word !important;
+    white-space: pre-wrap !important;
+    max-width: 100% !important;
+    
+  }
+  
+  /* Specific styles for code in mobile */
+  .result pre {
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    background: #1a1a1a !important;
+    padding: 8px !important;
+    border-radius: 4px !important;
+    margin: 8px 0 !important;
+    font-size: 2.5vw !important;
+  }
+  
+  .result code {
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: pre-wrap !important;
+    font-size: 2.5vw !important;
+  }
+  
+  .response{
+    width: 100%;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  .input img{
+    width: 6vw;
+    height: 6vw;
+  }
+  .input p{
+    font-size: 4vw;
+    word-break: break-word !important;
+  }
+  .response img{
+    width: 6vw;
+    height: 6vw;
+  }
+  .nav p{
+    font-size: 7vw;
+  }
+  .nav img{
+    width: 8vw;
+    height: 8vw;
+  }
+}

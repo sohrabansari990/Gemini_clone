@@ -1,0 +1,10 @@
+ const [input, setInput] = useState('');
+  const [loading, setLoading] = useState(false);
+  // recent prompt is gonna be used to store the input data 
+  const [recentPrompt, setRecentPrompt] = useState('');
+  // prev prompt gonna be used to show it in the Sidebar
+  const [previousPrompt, setPreviousPrompt] = useState([]);
+  // when its true - show result will hide the main homepage text and show the output data from ai
+  const [showResult, setShowResult] = useState(false);
+  // this state gonna be used to show the output data 
+  const [resultData, setResultData] = useState('');
